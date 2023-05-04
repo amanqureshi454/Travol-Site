@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="icon-images/android-chrome-512x512.png" type="image/x-icon">
+  <script src="https://kit.fontawesome.com/d280df20fc.js" crossorigin="anonymous"></script>
+  <title>Travol-Contact</title>
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,600;1,200;1,500;1,600;1,800&family=PT+Serif&family=Poppins:ital,wght@0,400;1,100;1,200;1,300;1,400&display=swap');
+
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: 'Barlow', sans-serif;
+  }
+
+  header {
+    background-image: url(./images/pexels-asad-photo-maldives-2724079.jpg);
+    background-size: cover;
+    height: 100vh;
+
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    margin-left: 60px;
+    font-size: 35px;
+    padding: 10px;
+    color: #fff;
+    cursor: pointer;
+
+  }
+
+  .logo p {
+    display: block;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 100;
+    cursor: pointer;
+
+  }
+
+  li {
+    display: inline-block;
+    margin: 10px;
+  }
+
+  .hover-line {
+    position: relative;
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 300;
+    margin-right: 20px;
+
+  }
+
+  .hover-line:last-child {
+    margin-right: 70px;
+
+  }
+
+  .hover-line::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 0%;
+    left: 0;
+    bottom: -10px;
+    transition: .3s;
+    background-color: aqua;
+
+  }
+
+  .hover-line:hover::after {
+    width: 100%;
+  }
+
+  .hover-line:hover {
+    color: aqua;
+  }
+
+  .sticky {
+    color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    height: 6rem;
+  }
+
+  .home-detail {
+
+    font-family: inherit;
+    margin-top: 400px;
+    margin-left: 300px;
+    text-transform: capitalize;
+
+  }
+
+  .home-title {
+    color: #000;
+    font-size: 20px;
+    letter-spacing: 1px;
+    padding-top: 2px;
+    font-weight: 600;
+    margin-top: 200px;
+    text-transform: capitalize;
+
+
+
+  }
+
+  .header-span {
+    font-family: inherit;
+    letter-spacing: 1px;
+    display: block;
+    text-transform: capitalize;
+    font-size: 75px;
+    color: #297bff;
+
+  }
+
+
+
+
+
+
+  .section-1 {
+    margin-top: 20px;
+
+  }
+
+  .guiding {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .guide-details {
+    margin-left: 50px;
+    margin-top: 40px;
+    color: #000;
+    letter-spacing: 1px;
+    padding: 30px;
+  }
+
+  .head-2 {
+    padding-top: 40px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+  }
+
+  .head-2-h1 {
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    font-size: 65px;
+    margin-bottom: 40px
+  }
+
+  .S1-h1-1 {
+    margin-bottom: 40px;
+    font-size: 50px;
+  }
+
+  h1 span {
+    color: #297bff;
+  }
+
+  .t-1 {
+    display: block;
+    color: #000;
+  }
+
+  .p-1,
+  .p-2 {
+    color: #000;
+    opacity: 0.5;
+    font-size: medium;
+    margin-bottom: 20px;
+  }
+
+  .container h5 {
+    padding: 10px;
+    font-size: large;
+    display: inline-block;
+  }
+
+  .container i {
+    font-size: 30px;
+    display: inline-block;
+    margin-left: 20px;
+
+  }
+
+  .container span {
+    display: block;
+    font-size: 22px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .contact-section {
+
+    background-color: #297bff;
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: center;
+    height: 600px;
+    margin-right: 100px;
+    margin-top: 40px;
+
+  }
+
+  .contact-h2 {
+    color: #fff;
+    font-size: 40px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+
+  .contact-left h2 {
+    color: #fff;
+    font-size: 24px;
+    margin-left: 7%;
+  }
+
+  .contact-left p i {
+    color: #ff004f;
+    font-size: 25px;
+    margin-right: 15px;
+  }
+
+  .contact-left p {
+    color: #fff;
+    margin: 10px;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  form {
+    width: 400px;
+  }
+
+
+
+  input {
+    display: inline-block;
+    padding: 5px;
+    height: 30px;
+    width: 400px;
+    margin-top: 10px;
+
+
+
+  }
+
+  .Subject-input {
+    display: block;
+    padding: 5px;
+    height: 30px;
+    margin-top: 10px;
+
+
+  }
+
+  textarea {
+    display: inline-block;
+    height: 200px;
+    padding: 10px;
+    width: 390px;
+    margin-top: 10px;
+
+
+  }
+
+  .btn-msg {
+    display: block;
+    color: aliceblue;
+    text-align: center;
+    font-size: 15px;
+
+    background-color: #297bff;
+    width: 160px;
+    height: 50px;
+    margin-top: 20px;
+    margin-left: 10px;
+    transition: .3s;
+    margin-bottom: 30px;
+    border: 1px solid gainsboro;
+    cursor: pointer;
+
+  }
+
+  .btn-msg:hover {
+    transform: scale(1.1);
+    color: #000;
+    background-color: #fff;
+  }
+
+
+
+
+
+
+  footer {
+    position: relative;
+    height: 200px;
+    background-color: #297bff;
+    display: flex;
+    margin-top: 50px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  footer p {
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
+
+  .end {
+    color: #fff;
+    bottom: 70px;
+    font-size: 15px;
+    margin-bottom: 40px;
+    margin-top: 15px;
+  }
+
+  .icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8px;
+    margin: 3px;
+    transition: 1s;
+  }
+
+  .fa-brands {
+    color: #fff;
+    font-size: 18px;
+    padding: 5px;
+    margin-top: 4px;
+
+
+  }
+
+  .fa-brands:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+
+  }
+</style>
+
+<body>
+  <header>
+    <div class="navbar">
+      <div class="logo">Travol <i class="fa-sharp fa-solid fa-plane-departure"></i>
+        <p>Explore the World</p>
+
+      </div>
+      <div class="nav">
+        <ul>
+          <li>
+            <a href="/web devlopment pro/Travel Agency/index.html" target="_self" class="hover-line">Home</a>
+            <a href="About.html" target="_self" class="hover-line">About</a>
+            <a href="Tour.html" target="_self" class="hover-line">Tours</a>
+            <a href="Contact.html" target="_self" class="hover-line">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <!-- <div class="button">
+          <button class="btn-login">Sign Up</button>
+      </div> -->
+    </div>
+    </div>
+
+
+    <div class="home-detail">
+      <p class="home-title">
+        get in touch
+        <span class="header-span"> Contact us</span>
+      </p>
+
+    </div>
+  </header>
+
+
+
+
+
+
+
+
+  <div class="guiding">
+    <div class="guide-details">
+      <p class="head-2">the best travel agency </p>
+      <h1 class="head-2-h1">
+        Contact us <span>for more Query </span>
+      </h1>
+
+      <p class="p-1"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur eius commodi quod
+        repellat reiciendis ,
+        eligendi autem distinctio. Asperiores officia nemo aspernatur ea
+        debitis reiciendis et pariatur
+        quos?</p>
+
+      <p class="p-2"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur eius commodi quod
+        repellat reiciendis ,
+        eligendi autem distinctio. Asperiores officia nemo aspernatur
+        ea debitis reiciendis et pariatur
+        quos?</p>
+
+      <div class="container">
+        <i class="fa-sharp fa-solid fa-phone-volume" style="color: #297bff;"></i>
+        <h5>For Information
+          <span style="color: #297bff;">855 303 444</span>
+        </h5>
+        <br>
+        <!-- <i class="fa-duotone fa-envelope"></i> -->
+        <i class="fa-regular fa-inbox-in" style="color: #297bff;"></i>
+        <h5>e-Mail Address</h5>
+
+        <p class="p-2">
+          inf0Travol@travol.com
+        </p>
+        <br>
+        <i class="fa-solid fa-location-crosshairs" style="color: #297bff;"></i>
+        <h5>Location</h5>
+        <p class="p-2">
+          1616 Broadway NY, New York 10001
+          United States of America
+        </p>
+
+      </div>
+    </div>
+
+
+
+
+
+
+
+    <div class="contact-section">
+      <form action="">
+        <div class="contact">
+          <h2 class="contact-h2">
+            Get in Touch
+          </h2>
+
+
+
+          <input type="text" placeholder=" Your Name" required>
+          <input type="email" placeholder=" Your Email" required>
+          <input type="text" placeholder="Subject" required class="Subject-input">
+          <textarea placeholder="Message" required></textarea>
+
+          <button class="btn-msg" type="submit">Send Message</button>
+        </div>
+    </div>
+    </form>
+  </div>
+  <footer>
+    <p>Aman Qureshi</p>
+    <div class="icons">
+      <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+      <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://www.linkedin.com"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="https://www.github.com"><i class="fa-brands fa-github"></i></a>
+    </div>
+
+    <p class="end"> ©️ CopyRight By Aman Qureshi</p>
+  </footer>
+
+</body>
+
+</html>

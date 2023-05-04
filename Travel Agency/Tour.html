@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./icon-images/android-chrome-512x512.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/d280df20fc.js" crossorigin="anonymous"></script>
+
+    <title>Travol-Tour</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,600;1,200;1,500;1,600;1,800&family=PT+Serif&family=Poppins:ital,wght@0,400;1,100;1,200;1,300;1,400&display=swap');
+
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Barlow', sans-serif;
+    }
+
+
+
+
+
+    header {
+        background-image: url(./images/dubai\ palm\ resort.jpg);
+        background-size: cover;
+
+        height: 100vh;
+
+
+    }
+
+    .logo {
+        margin-left: 60px;
+        font-size: 35px;
+        padding: 10px;
+        color: #fff;
+        cursor: pointer;
+
+    }
+
+    .logo p {
+        display: block;
+        color: #fff;
+        font-size: 15px;
+        font-weight: 100;
+        cursor: pointer;
+
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    li {
+        display: inline-block;
+        margin: 10px;
+    }
+
+    .hover-line {
+        position: relative;
+        color: #fff;
+        font-size: 18px;
+        text-decoration: none;
+        cursor: pointer;
+        font-weight: 300;
+        margin-right: 20px;
+
+    }
+
+    .hover-line:last-child {
+        margin-right: 70px;
+
+    }
+
+    .hover-line::after {
+        content: "";
+        position: absolute;
+        height: 3px;
+        width: 0%;
+        left: 0;
+        bottom: -10px;
+        transition: .3s;
+        background-color: aqua;
+
+    }
+
+    .hover-line:hover::after {
+        width: 100%;
+    }
+
+    .hover-line:hover {
+        color: aqua;
+    }
+
+
+
+    .about-page-heading {
+        display: flex;
+        flex-direction: column;
+        margin-top: 200px;
+
+    }
+
+    .section-1-para {
+        font-size: 18px;
+        letter-spacing: 1px;
+        font-weight: 100;
+        color: #fff;
+        float: left;
+        margin-left: 100px;
+        text-transform: capitalize;
+    }
+
+    .about-home-title {
+        color: #fff;
+        margin-left: 100px;
+        font-weight: 700;
+        font-size: 75px;
+        letter-spacing: 1px;
+        text-transform: capitalize;
+    }
+
+    .about-home-title span {
+        color: #297bff;
+        -webkit-text-stroke: #297bff;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .popular-destination {
+        margin-top: 60px;
+        margin-left: 90px;
+    }
+
+    .popular-destination h1 {
+        font-size: 50px;
+        color: #000;
+        text-transform: capitalize;
+
+    }
+
+    .popular-destination p {
+        font-size: 20px;
+        color: #000;
+    }
+
+    .box-section-1 {
+        height: 600px;
+        width: 400px;
+
+    }
+
+    .box-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+
+    .container-2 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+
+    .box-section-1 {
+        background-color: #333;
+        background-position: center;
+        background-blend-mode: multiply;
+        background-size: cover;
+        cursor: pointer;
+        backdrop-filter: blur(2px);
+        transition: .5s ease-in-out;
+        transform: scale(.9);
+
+    }
+
+    .img-1 {
+        background-image: url(images/italy1.jpg);
+    }
+
+    .box-section-1 h1 {
+        margin-top: 440px;
+        font-size: 25px;
+        margin-left: 14px;
+        margin-bottom: 10px;
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    .box-section-1 p {
+        letter-spacing: 1px;
+        color: rgba(255, 255, 255, 0.5);
+        margin-left: 8px;
+        padding: 10px;
+        overflow: hidden;
+        margin-top: 7px;
+    }
+
+    .img-2 {
+        background-image: url(./images/pexels-asad-photo-maldives-3601426.jpg);
+    }
+
+    .img-3 {
+        background-image: url(./images/wallpaperflare.com_wallpaper\ \(10\).jpg);
+    }
+
+    .img-4 {
+        background-image: url(./images/wallpaperflare.com_wallpaper\ \(5\).jpg);
+        background-position: left;
+    }
+
+    .img-5 {
+        background-image: url(./images/wallpaperflare.com_wallpaper\ \(6\).jpg);
+    }
+
+    .img-6 {
+        background-image: url(./images/kazuend-S9lCKQ9XS8c-unsplash.jpg);
+        background-position: right;
+    }
+
+    .box-section-1:hover {
+        transform: scale(1);
+        background-color: #fff;
+    }
+
+
+    .box-section-1:first-child {
+        margin-left: 90px;
+
+    }
+
+    .box-section-1:last-child {
+        margin-right: 90px;
+
+    }
+
+
+    -->footer {
+        position: relative;
+        height: 200px;
+        background-color: rgb(81, 81, 240);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer p {
+        color: #fff;
+        font-size: 20px;
+        letter-spacing: 1px;
+    }
+
+    .end {
+        color: #fff;
+        bottom: 70px;
+        font-size: 15px;
+        margin-bottom: 40px;
+        margin-top: 15px;
+    }
+
+    .icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 8px;
+        margin: 3px;
+        transition: 1s;
+    }
+
+    .fa-brands {
+        color: #fff;
+        font-size: 18px;
+        padding: 5px;
+        margin-top: 4px;
+
+
+    }
+
+    .fa-brands:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+
+    }
+</style>
+
+<body>
+    <header>
+        <div class="navbar">
+
+            <div class="logo">Travol <i class="fa-sharp fa-solid fa-plane-departure"></i>
+                <p>Explore the World</p>
+
+            </div>
+            <div class="nav">
+                <ul>
+                    <li>
+                        <a href="index.html" class="hover-line">Home</a>
+                        <a href="About.html" class="hover-line">About</a>
+                        <a href="Tour.html" class="hover-line">Tours</a>
+                        <a href="Contact.html" class="hover-line">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="about-page-heading">
+            <p class="section-1-para">the best travel agency</p>
+            <h1 class="about-home-title">
+                We helping you find <span> <br>Your dream</span> vacation
+                <br>
+            </h1>
+        </div>
+    </header>
+
+
+
+
+
+
+
+    <div class="section-1">
+        <div class="popular-destination">
+            <p>Top Destination</p>
+            <h1>Popular <span style="color: #297bff">Destination</span></h1>
+        </div>
+        <div class="box-container">
+            <div class=" box-section-1 img-1">
+                <h1>Italy</h1>
+                <hr>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum ullam fugit alias facere laboriosam
+                    uga ratione soluta porro quae
+                </p>
+            </div>
+            <div class=" box-section-1 img-2">
+                <h1>Maldives</h1>
+                <hr>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum ullam fugit alias facere laboriosam
+                    uga ratione soluta porro quae
+                </p>
+            </div>
+            <div class=" box-section-1 img-3">
+                <h1>San Franciso</h1>
+                <hr>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum ullam fugit alias facere laboriosam
+                    uga ratione soluta porro quae
+                    .</p>
+            </div>
+        </div>
+        <div class="container-2">
+
+            <div class=" box-section-1 img-4">
+                <h1>Dubai</h1>
+                <hr>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum ullam fugit alias facere laboriosam
+                    uga ratione soluta porro quae
+                </p>
+            </div>
+            <div class=" box-section-1 img-5">
+                <h1>China</h1>
+                <hr>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum ullam fugit alias facere laboriosam
+                    uga ratione soluta porro quae
+                    p>
+            </div>
+            <div class=" box-section-1 img-6">
+                <h1>Usa</h1>
+                <hr>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum ullam fugit alias facere laboriosam
+                    uga ratione soluta porro quae
+                    .</p>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <footer>
+        <p>Aman Qureshi</p>
+        <div class="icons">
+            <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.github.com"><i class="fa-brands fa-github"></i></a>
+        </div>
+
+        <p class="end"> ©️ CopyRight By Aman Qureshi</p>
+    </footer>
+
+
+
+</body>
+
+</html>

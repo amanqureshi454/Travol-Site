@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="icon-images/android-chrome-512x512.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/d280df20fc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="mediaquery.css">
+
+    <title>Travol-About</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,600;1,200;1,500;1,600;1,800&family=PT+Serif&family=Poppins:ital,wght@0,400;1,100;1,200;1,300;1,400&display=swap');
+
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Barlow', sans-serif;
+    }
+
+    header {
+        background-image: url(./images/pexels-asad-photo-maldives-1456293.jpg);
+        background-size: cover;
+        height: 100vh;
+    }
+
+    .logo {
+        margin-left: 60px;
+        font-size: 35px;
+        padding: 10px;
+        color: #fff;
+        cursor: pointer;
+
+    }
+
+    .logo p {
+        display: block;
+        color: #fff;
+        font-size: 15px;
+        font-weight: 100;
+        cursor: pointer;
+
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    li {
+        display: inline-block;
+        margin: 10px;
+    }
+
+    .hover-line {
+        position: relative;
+        color: #fff;
+        font-size: 18px;
+        text-decoration: none;
+        cursor: pointer;
+        font-weight: 300;
+        margin-right: 20px;
+
+    }
+
+    .hover-line:last-child {
+        margin-right: 70px;
+
+    }
+
+    .hover-line::after {
+        content: "";
+        position: absolute;
+        height: 3px;
+        width: 0%;
+        left: 0;
+        bottom: -10px;
+        transition: .3s;
+        background-color: aqua;
+
+    }
+
+    .hover-line:hover::after {
+        width: 100%;
+    }
+
+    .hover-line:hover {
+        color: aqua;
+    }
+
+
+
+    .about-page-heading {
+        display: flex;
+        flex-direction: column;
+        margin-top: 200px;
+
+    }
+
+    .section-1-para {
+        font-size: 18px;
+        letter-spacing: 1px;
+        font-weight: 100;
+        color: #fff;
+        float: left;
+        margin-left: 100px;
+        text-transform: capitalize;
+    }
+
+    .about-home-title {
+        color: #fff;
+        margin-left: 100px;
+        font-weight: 700;
+        font-size: 75px;
+        letter-spacing: 1px;
+        text-transform: capitalize;
+    }
+
+    .about-home-title span {
+        color: #297bff;
+        -webkit-text-stroke: #297bff;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .section-1 {
+        margin-top: 20px;
+
+    }
+
+    .guiding {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .guide-details {
+        margin-left: 50px;
+        margin-top: 40px;
+        color: #000;
+        letter-spacing: 1px;
+        padding: 30px;
+    }
+
+    .head-2 {
+        padding-top: 40px;
+        text-transform: capitalize;
+        letter-spacing: 1px;
+    }
+
+    .head-2-h1 {
+        text-transform: capitalize;
+        letter-spacing: 1px;
+        font-size: 65px;
+        margin-bottom: 40px
+    }
+
+    .S1-h1-1 {
+        margin-bottom: 40px;
+        font-size: 50px;
+    }
+
+    h1 span {
+        color: #297bff;
+    }
+
+    .t-1 {
+        display: block;
+        color: #000;
+    }
+
+    .p-1,
+    .p-2 {
+        color: #000;
+        opacity: 0.5;
+        font-size: medium;
+        margin-bottom: 20px;
+    }
+
+    .img img {
+        height: 500px;
+        width: 400px;
+        margin-right: 100px;
+        margin-top: 40px;
+    }
+
+    .container h5 {
+        padding: 10px;
+        font-size: large;
+        display: inline-block;
+    }
+
+    .container i {
+        font-size: 30px;
+        display: inline-block;
+        color: darkblue;
+    }
+
+    .container span {
+        display: inline-block;
+        font-size: 22px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .about--section-2 {
+        background-color: rgb(40, 40, 151);
+        padding-top: 50px;
+        padding-bottom: 80px;
+        height: 950px;
+
+    }
+
+    .section-2-p {
+        color: #297bff;
+        font-size: 18px;
+        text-transform: capitalize;
+        margin-left: 110px;
+        letter-spacing: 1px;
+    }
+
+    .Expert-title {
+        color: #fff;
+        font-size: 18px;
+        text-transform: capitalize;
+        margin-left: 100px;
+        font-weight: 100;
+    }
+
+    .about--section-2 h1 {
+        color: #fff;
+        font-size: 60px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        margin-left: 110px;
+        text-transform: capitalize;
+    }
+
+    .about--section-2 h1 span {
+        color: #297bff;
+    }
+
+
+    .box-container {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .box-about {
+        height: 900px;
+        margin-top: 40px;
+        margin-right: 25px;
+    }
+
+    .box-about {
+        width: 400px;
+        height: 600px;
+        margin-bottom: 40px;
+
+    }
+
+    .box-about {
+        background-color: #222;
+        background-position: center;
+        /* background-blend-mode: multiply; */
+        background-size: cover;
+        transition: .7s ease;
+        cursor: pointer;
+    }
+
+    .name-location i {
+        font-size: 25px;
+        color: #fff;
+        margin: 10px;
+    }
+
+    .Expert-1 {
+        background-image: url(./images/jakob-owens-WbAHZcKUnvE-unsplash.jpg);
+    }
+
+    .Expert-2 {
+        background-image: url(./images/l-a-l-a-s-z-a-S0hS0HfH_B8-unsplash.jpg);
+    }
+
+    .Expert-3 {
+        background-image: url(./images/canada1-1.jpg);
+    }
+
+    .box-about:hover {
+        transform: translateY(-20px);
+        background-color: #fff;
+    }
+
+
+    .box-about:first-child {
+        margin-left: 90px;
+
+    }
+
+    .box-about:last-child {
+        margin-right: 90px;
+
+    }
+
+    .Expert-details {
+        background-color: #fff;
+        height: 150px;
+        width: 300px;
+        border: 2px #000;
+        margin: auto;
+        overflow: hidden;
+        margin-top: 500px;
+    }
+
+    .Expert-details h6 {
+        font-size: 20px;
+        color: #000;
+        letter-spacing: 1px;
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+
+    .Expert-title {
+        font-size: 25px;
+        margin-top: 15px;
+        margin-left: 15px;
+        color: #000;
+
+    }
+
+    .hover--guide {
+        background-color: #91b8f6;
+        font-size: 18px;
+        padding: 10px;
+        text-align: center;
+        letter-spacing: 1px;
+        transition: .8s;
+        transition: bottom to top;
+
+    }
+
+    .hidden {
+        display: none;
+    }
+
+
+
+
+
+
+
+
+
+    /* --------footer section -------- */
+
+
+    footer {
+        position: relative;
+        height: 200px;
+        background-color: rgb(81, 81, 240);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer p {
+        color: #fff;
+        font-size: 20px;
+        letter-spacing: 1px;
+    }
+
+    .end {
+        color: #fff;
+        bottom: 70px;
+        font-size: 15px;
+        margin-bottom: 40px;
+        margin-top: 15px;
+    }
+
+    .icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 8px;
+        margin: 3px;
+        transition: 1s;
+    }
+
+    .fa-brands {
+        color: #fff;
+        font-size: 18px;
+        padding: 5px;
+        margin-top: 4px;
+
+
+    }
+
+    .fa-brands:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+
+    }
+</style>
+
+<body>
+    <header>
+        <div class="navbar">
+
+            <div class="logo">Travol <i class="fa-sharp fa-solid fa-plane-departure"></i>
+                <p>Explore the World</p>
+
+            </div>
+            <div class="nav">
+                <ul>
+                    <li>
+                        <a href="index.html" class="hover-line">Home</a>
+                        <a href="About.html" class="hover-line">About</a>
+                        <a href="Tour.html" class="hover-line">Tours</a>
+                        <a href="Contact.html" class="hover-line">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="about-page-heading">
+            <p class="section-1-para">the best travel agency</p>
+            <h1 class="about-home-title">
+                We helping you find <span> <br>Your dream</span> vacation
+                <br>
+            </h1>
+        </div>
+    </header>
+    <div class="section-1">
+
+        <div class="guiding">
+            <div class="guide-details">
+                <p class="head-2">the best travel agency </p>
+                <h1 class="head-2-h1">
+                    discover the <span>World</span><span class="t-1"> with our guide</span>
+                </h1>
+
+                <p class="p-1"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur eius commodi quod
+                    repellat reiciendis ,
+                    eligendi autem distinctio. Asperiores officia nemo aspernatur ea debitis reiciendis et pariatur
+                    quos?</p>
+
+                <p class="p-2"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur eius commodi quod
+                    repellat reiciendis ,
+                    eligendi autem distinctio. Asperiores officia nemo aspernatur ea debitis reiciendis et pariatur
+                    quos?</p>
+
+                <div class="container">
+                    <i class="fa-sharp fa-solid fa-circle-check" style="color: #297bff;"></i>
+                    <h5>20 Years of Experience</h5>
+                    <br>
+                    <i class="fa-sharp fa-solid fa-circle-check" style="color: #297bff;"></i>
+                    <h5>150+ Tour Destination</h5>
+                    <br>
+                    <i class="fa-sharp fa-solid fa-phone-volume " style="color: #297bff;"></i>
+                    <h5>For Information
+                        <span style="color: #297bff;">855 303 444</span>
+                    </h5>
+                </div>
+            </div>
+
+
+            <div class="img">
+                <img src="./images/l-a-l-a-s-z-a-S0hS0HfH_B8-unsplash.jpg" alt="">
+            </div>
+
+
+
+
+
+        </div>
+    </div>
+
+
+    <!-- section-1 about Guides -->
+
+    <div class="about--section-2">
+
+        <p class="section-2-p">travel Expert </p>
+        <h1>meet our <span>Guides</span> </h1>
+        <div class="box-container">
+            <div class="box-about box-1 Expert-1">
+                <div class="Expert-details">
+                    <h6>Tour</h6>
+                    <p class="Expert-title">Experience the Hotness of Desert
+                    </p>
+                    <p class="hover--guide hidden">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem at, repudiandae deleniti
+                        dignissimos
+                        perspiciatis debitis cupiditate quis fugiat, quos voluptas itaque placeat, aperiam magnam.
+                    </p>
+
+                </div>
+            </div>
+
+
+            <div class=" box-about box-2 Expert-2">
+                <div class="Expert-details">
+                    <h6>Travel</h6>
+                    <p class="Expert-title">Most popular Heritage sites
+                    </p>
+                    <p class="hover--guide hidden">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem at, repudiandae deleniti
+                        dignissimos
+                        perspiciatis debitis cupiditate quis fugiat, quos voluptas itaque placeat, aperiam magnam.
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="box-about box-3 Expert-3">
+                <div class="Expert-details">
+                    <h6>Destination</h6>
+                    <p class="Expert-title">Tips Towards the beautifull Vacation
+                    </p>
+                    <p class="hover--guide hidden">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem at, repudiandae deleniti
+                        dignissimos
+                        perspiciatis debitis cupiditate quis fugiat, quos voluptas itaque placeat, aperiam magnam.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <footer>
+        <p>Aman Qureshi</p>
+        <div class="icons">
+            <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.github.com"><i class="fa-brands fa-github"></i></a>
+        </div>
+
+        <p class="end"> ©️ CopyRight By Aman Qureshi</p>
+    </footer>
+
+
+</body>
+
+</html>
